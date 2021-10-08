@@ -22,10 +22,8 @@ class Content {
     this.$discList[descPosition].style.backgroundColor = event.target.style.backgroundColor;
     if (descPosition !== this.currentState) {
       this.$discList[this.currentState || 0].classList.remove('content__description_active');
-      setTimeout(() => {
-        this.$discList[descPosition].classList.add('content__description_active');
-        this.currentState = descPosition;
-      }, 1000);
+      this.$discList[descPosition].classList.add('content__description_active');
+      this.currentState = descPosition;
     }
   }
 
