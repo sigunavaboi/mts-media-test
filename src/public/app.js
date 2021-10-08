@@ -1,6 +1,7 @@
 class Content {
   constructor() {
     this.currentState = null;
+    this.$lastButton = null;
     this.$buttons = [];
     this.$discList = [];
     this.init();
@@ -25,6 +26,8 @@ class Content {
       this.$discList[descPosition].classList.add('content__description_active');
       this.currentState = descPosition;
     }
+    this.$lastButton = event.target;
+    this.$lastButton.style.backgroundColor = this.getRandomColor();
   }
 
   getRandomColor() {
