@@ -34,12 +34,9 @@ body {
 .content__description {
   width: 100%;
   height: 0px;
-  /* background-color: royalblue; */
-  /* opacity: 0; */
   transition: 0.5s;
 }
 
 .content__description_active {
-  /* opacity: 1; */
   height: 300px;
 }
