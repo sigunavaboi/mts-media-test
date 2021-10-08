@@ -10,7 +10,8 @@ server.get('/', (req, res) => {
 });
 
 (() => {
-  server.listen(3000, () => {
+  const port = process.env.PORT || 8000;
+  server.listen(port, () => {
     console.log('server is running');
   });
 })()
